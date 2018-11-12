@@ -435,7 +435,7 @@ module Kitchen
         if conf[key] && conf[key].kind_of?(Array)
           values = conf[key]
           values.each do |value|
-            new_config = config.clone
+            new_config = conf.clone
             new_config[key] = value
             configs.push new_config
           end
